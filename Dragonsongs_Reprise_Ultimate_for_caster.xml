@@ -11,7 +11,7 @@
 <zone>Dragonsong's Reprise (Ultimate)</zone>
 <locale>JA</locale>
 <start>0039::戦闘開始</start>
-<entry>2天竜</entry>
+<entry>トールダン</entry>
 
 <default target-element="Activity" target-attr="sync-s" value="-10" />
 <default target-element="Activity" target-attr="sync-e" value="10" />
@@ -25,70 +25,22 @@
 }
 
 <s name="トールダン">
-	<!-- timeline -->
-	<a time="120.0" text="トールダン撃破中"/>
-	<a time="240.0" text="トールダン撃破中"/>
-	<!-- subroutine trigger -->
 	<!-- phase move-->
 	<t sync="異邦の詩人:騎神トールダンを討ち果たすも 旅の仲間が邪竜の影と化す 竜詩戦争は 雲廊にて 最終決戦へと至る――" goto="ニーズヘッグ"/>
 </s>
 <s name="ニーズヘッグ">
-	<!-- timeline -->
-	<a time="120.0" text="ニーズ撃破中"/>
-	<a time="240.0" text="ニーズ撃破中"/>
-	<!-- subroutine trigger -->
 	<!-- phase move-->
 	<t sync="アルフィノ:エスティニアン殿！" goto="邪眼"/>
 </s>
 <s name="邪眼">
-	<!-- timeline -->
-	<a time="3.0" sync="エスティニアン:あ、相棒よ… 最期の頼みだ…！"/>
-	<a time="7.0" sync="エスティニアン:俺が邪竜の意思を 押さえ込んでいる隙に…"/>
-	<a time="10.0" text="巫女の想い/盟友の想い" />
-	<a time="11.0" sync="エスティニアン:トドメを… トドメを刺してくれッ！" />
-	<a time="17.0" sync="エスティニアン:グオオオォォォォッ！"/>
-	<a time="17.9" text="苦悶の咆哮" sync="エスティニアン:[0-9A-F]{4}:苦悶の咆哮"/>
-	<a time="22.0" sync="邪竜の(左|右)眼 starts using 邪竜爪牙"/>
-	<a time="26.0" text="赤線青線付与" sync="邪竜の(左|右)眼:[0-9A-F]{4}:邪竜爪牙"/>
-	<a time="35.0" text="黄玉処理"/>
-	<a time="41.0" text="青玉処理"/>
-	<a time="49.0" sync="邪竜の(左|右)眼 starts using ミラージュダイブ"/>
-	<a time="53.3" text="ミラージュダイブ１回目" sync="ニーズヘッグ:[0-9A-F]{4}:ミラージュダイブ:[0-9A-F]{8}:[pc]" sync-e="3" />
-	<a time="58.4" text="ミラージュダイブ２回目" sync="ニーズヘッグ:[0-9A-F]{4}:ミラージュダイブ:[0-9A-F]{8}:[pc]" sync-e="3" />
-	<a time="63.6" text="ミラージュダイブ３回目" sync="ニーズヘッグ:[0-9A-F]{4}:ミラージュダイブ:[0-9A-F]{8}:[pc]" sync-e="3" />
-	<a time="68.7" text="ミラージュダイブ４回目" sync="ニーズヘッグ:[0-9A-F]{4}:ミラージュダイブ:[0-9A-F]{8}:[pc]" sync-s="-3" />
-	<a time="72.0" sync="邪竜の(左|右)眼 starts using 憤怒の波動"/>
-	<a time="78.5" text="憤怒の波動" sync="邪竜の右眼:68BD:憤怒の波動"/>
-	<!-- subroutine trigger -->
 	<!-- phase move-->
 	<t sync="ニーズヘッグ:これがヒトの意思…… 我は……" goto="教皇庁２回目"/>
 </s>
 <s name="教皇庁２回目">
-	<!-- timeline -->
-	<a time="14.0" sync="聖騎士ゼフィラン starts using スピア・オブ・ハルオーネ"/>
-	<a time="21.0" text="タンクLB" sync="オルシュファン:危ないッ！"/>
-	<a time="24.0" sync="聖騎士ゼフィラン:喰らえッ！"/>
-	<!-- subroutine trigger -->
 	<!-- phase move-->
 	<t sync="オルシュファン:無事…だったのだな… よかった…本当に…" goto="至天の陣：風槍"/>
 </s>
 <s name="至天の陣：風槍">
-	<!-- timeline -->
-	<a time="12.0" sync="騎神トールダン starts using 聖徒化"/>
-	<a time="16.0" sync="騎神トールダン:穢れし竜たちよ… 変革の礎となれ！"/>
-	<a time="17.0" sync="ヴィゾーヴニル:とーるだんノ 名ノ下ニ…"/>
-	<a time="17.0" sync="ダークスケール:我ガ主ヨ…"/>
-	<a time="17.0" sync="ヴェズルフェルニル:戦神ニ栄光アレ…"/>
-	<a time="20.0" sync="騎神トールダン starts using 竜の眼"/>
-	<a time="33.0" sync="騎神トールダン:来たれ！ 我が騎士、我が竜よ！"/>
-	<a time="37.0" text="至天の陣：風槍" sync="騎神トールダン starts using 至天の陣：風槍" />
-	<a time="42.0" sync="騎神トールダン:王の栄光をここに！"/>
-	<a time="47.0" sync="ヴェズルフェルニル starts using ツイスターダイブ" />
-	<a time="54.0" text="ツイスター注意" sync="ヴェズルフェルニル:[0-9A-F]{4}:ツイスターダイブ" />
-	<a time="59.0" text="アスカロンメルシー" sync="騎神トールダン:[0-9A-F]{4}:レベレーション・アスカロンメルシー"/>
-	<a time="60.0" sync="(ヴィゾーヴニル|ダークスケール) starts using カータライズ"/>
-	<a time="61.0" sync="聖騎士グリノー starts using エンプティディメンション" />
-	<a time="67.0" text="エンシェントクエイガ" sync="騎神トールダン starts using エンシェントクエイガ" />
 	<!-- phase move-->
 	<t sync="さて、光の使徒よ、ここで問おう。 貴様はいかにして、この千年戦争を終わらせようというのだ？" goto="至天の陣：死刻" />
 </s>
@@ -96,71 +48,24 @@
 	<t sync="異邦の詩人:ひとつの命が 歴史の流れを変えてゆく" goto="2天竜" />
 </s>
 <s name="2天竜">
-	<!-- timeline -->
-	<a time="010" text="同期待ち" sync="ニーズヘッグ:穢らわしいヒトどもめ！" />
-	<a time="019" text="息吹散開準備" sync="ニーズヘッグは「邪竜の息吹」の構え。" notice="息吹散会" notice-o="0" sync-count="1">
-		<v-notice text="息吹位置へ！" />
-	</a>
-	<a time="026" text="竜の息吹" sync="ニーズヘッグの「邪竜の息吹」" notice="めっさつまで動かない！" notice-o="-2" sync-count="1">
-		<v-notice text="滅殺まで動かない！" duration="9"/>
-	</a>
-	<a time="035" text="滅殺の誓い付与" sync="ニーズヘッグの「滅殺の誓い」" sync-count="1"/>
-	<a time="046" text="アク・アファー" sync="ニーズヘッグの「アク・アファー」" notice="バマジク" sync-count="1"/>
-	<a time="051" text="【予兆】ウィング" sync="フレースヴェルグは「ホーリーウィング」の構え。" notice="フレースにカメラを向ける" notice-o="0" sync-count="1"/>
-	<a time="054" text="【予兆】カータライズ" sync="ニーズヘッグは「カータライズ」の構え。" sync-count="1"/>
-	<a time="059" text="ホーリーウィング" sync="フレースヴェルグの「ホーリーウィング」" sync-count="1"/>
-	<a time="060" text="カータライズ" sync="ニーズヘッグの「カータライズ」" sync-count="1" />
-	<a time="061" text="【滅殺：DPS→MT】" notice="めっさつ確認"  notice-o="0">
-		<v-notice text="滅殺ついてたら中央へ " duration="6"/>
-		<v-notice text="【滅殺：DPS→MT】 " duration="6"/>
-	</a>
-	<a time="068" text="【滅殺受け渡し：１回目】" sync="ニーズヘッグの「滅殺の誓い」" sync-count="2"/>
-	<a time="075" text="邪念の炎" sync="ニーズヘッグの「邪念の炎」"/>
-	<a time="076" text="アク・モーン" sync="ニーズヘッグは「アク・モーン」の構え。"/>
-	<a time="079" text="カータ確認" sync="フレースヴェルグは「カータライズ」の構え。" notice="アドル" notice-o="3"/>
-	<a time="085" text="アク・モーン1" sync="ニーズヘッグの「アク・モーン」" sync-count="1"/>
-	<a time="085" text="カータライズ" sync="フレースヴェルグの「カータライズ」" />
-	<a time="087" text="アク・モーン2" />
-	<a time="088" text="アク・モーン3" />
-	<a time="090" text="アク・モーン4" />
-	<a time="091" text="【予兆】テイルorウィング" sync="ニーズヘッグは「ヒート(ウィング|テイル)」の構え。" sync-count="1"/>
-	<a time="095" text="!整列・デバフ確認!" notice="じゃねんデバフ確認" notice-o="-10">
-		<v-notice text="邪念デバフ確認！！" duration="10"/>
-	</a>
-	<a time="097" text="テイルorウィング" sync="ニーズヘッグの「ヒート(ウィング|テイル)」" sync-count="1"/>
-	<a time="098" text="炎発動" sync="ニーズヘッグの「(復讐の炎|道連れの炎)」" sync-count="1"/>
-	<a time="099" text="【滅殺：MT→ST】" notice="めっさつからはなれる" notice-o="0">
-		<v-notice text="タンクから離れる"/>
-		<v-notice text="【滅殺：MT→ST】"/>
-	</a>
-	<a time="102" text="【滅殺受け渡し：２回目】" sync="ニーズヘッグの「滅殺の誓い」" sync-count="3"/>
-	<a time="115" text="アク・アファー" sync="ニーズヘッグの「アク・アファー」" sync-count="2"/>
-	<!--テイルとウィングの通知はID取れたらトリガにて通知する予定。-->
-	<a time="119" text="【予兆】ウィング" sync="フレースヴェルグは「ホーリーウィング」の構え。" notice="フレースにカメラを向ける" notice-o="0" sync-count="2"/>
-	<a time="121" text="【予兆】テイルorウィング" sync="ニーズヘッグは「ヒート(ウィング|テイル)」の構え。" sync-count="2"/>
-	<a time="127" text="Wウィング" sync="フレースヴェルグの「ホーリーウィング」" sync-count="2"/>
-	<a time="130" text="【滅殺：ST→近接】" notice="めっさつからはなれる" notice-o="0">
-		<v-notice text="中央へ移動" duration="6"/>
-		<v-notice text="【滅殺：ST→近接】" duration="6"/>
-	</a>
-	<a time="136" text="【滅殺受け渡し：３回目】" sync="ニーズヘッグの「滅殺の誓い」" sync-count="4"/>
-	<a time="140" text="息吹散開準備" sync="ニーズヘッグは「邪竜の息吹」の構え。" sync-count="2" notice-o="0">
-		<v-notice text="息吹散開2" duration="6"/>
-	</a>
-	<a time="147" text="竜の息吹" sync="ニーズヘッグの「邪竜の息吹」" sync-count="2"/>
-	<a time="154" sync="ニーズヘッグは「カータライズ」の構え。" sync-count="2"/>
-	<a time="160" text="カータライズ" sync="ニーズヘッグの「カータライズ」" sync-count="2" />
-	<a time="166" text="タッチダウン" sync="ニーズヘッグの「タッチダウン」" notice="えーまーかー集合">
-		<v-notice text="Aマーカー集合" duration="3"/>
-	</a>
-	<a time="167" text="【滅殺：近接→キャス】" notice="めっさつをうけとる" notice-o="-2">
-		<v-notice text="滅殺まで動かない！" duration="5"/>
-		<v-notice text="【滅殺：近接→キャス】" duration="5"/>
-	</a>
-	<a time="170" text="【滅殺受け渡し：４回目】" sync="ニーズヘッグの「滅殺の誓い」" sync-count="5"/>
-	<a time="193" text="時間切れ" sync="ニーズヘッグの「最期の咆哮」" />
-
 	<!-- subroutine trigger -->
+	<t sync="ニーズヘッグは「邪竜の息吹」の構え。" notice="かさねる" notice-o="0" sync-count="1"/>
+	<t sync="ニーズヘッグは「邪竜の息吹」の構え。" notice="かさねない" notice-o="0" sync-count="2"/>
+	<t sync="ニーズヘッグの「滅殺の誓い」" notice="めっさつたいき" sync-count="1">
+		<v-notice text="【滅殺：DPS付与】" duration="6"/>
+	</t>
+	<t sync="ニーズヘッグの「滅殺の誓い」" notice="めっさつかくにん" sync-count="2">
+		<v-notice text="【滅殺：DPS→MT】" duration="6"/>
+	</t>
+	<t sync="ニーズヘッグの「滅殺の誓い」" notice="めっさつはなれる" sync-count="3">
+		<v-notice text="【滅殺：MT→ST】" duration="6"/>
+	</t>
+	<t sync="ニーズヘッグの「滅殺の誓い」" notice="めっさつはなれる" sync-count="4">
+		<v-notice text="【滅殺：ST→近接】" duration="6"/>
+	</t>
+	<t sync="ニーズヘッグの「滅殺の誓い」" notice="めっさつうけとり" sync-count="5">
+		<v-notice text="【滅殺：近接→キャス】" duration="6"/>
+	</t>
 	<!-- phase move-->
 </s>
 </timeline>
